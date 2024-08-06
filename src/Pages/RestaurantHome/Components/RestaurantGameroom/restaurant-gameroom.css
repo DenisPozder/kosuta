@@ -1,0 +1,297 @@
+.restaurant-gameroom {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.rg-radial-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 65%, var(--restaurant-background) );
+    z-index: 30;
+}
+
+.rg-top-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--restaurant-background), transparent 30%);
+    z-index: 30;
+}
+
+.rg-bottom-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--restaurant-background), transparent 30%);
+    z-index: 30;
+}
+
+.rg-tree1 {
+    position: absolute;
+    top: calc(50% + 15%);
+    left: calc(50% - 35%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    height: 100%;
+}
+
+.rg-tree1-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    background-color: var(--restaurant-background);
+    opacity: .3;
+}
+
+.rg-tree2 {
+    position: absolute;
+    left: calc(50% - 50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 120%;
+    z-index: 5;
+}
+
+.rg-tree3 {
+    position: absolute;
+    left: calc(50% - 25%);
+    top: calc(50% + 25%);
+    transform: translate(-50%, -50%);
+    height: 400px;
+    z-index: 3;
+}
+
+.rg-tree3-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    background-color: var(--restaurant-background);
+    opacity: .3;
+}
+
+.rg-content {
+    width: 100%;
+    height: calc(480px + 3rem);
+    position: relative;
+}
+
+.rg-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rgc-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rgcw-content {
+    width: 100%;
+    height: 80%;
+    margin: 0 80px;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.rg-slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.rg-slider .rg-slider-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.rg-slider .rg-slider-content .rg-slider-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: sliderOpacity 1s ease-out forwards;
+}
+
+.rg-slider .rg-slider-content .rg-slider-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rgcw-content h1 {
+    color: var(--dark-color);
+    font-size: 2.4rem;
+    font-family: var(--restaurant-font);
+    user-select: none;
+}
+
+.rgcw-content .rgcw-h3 {
+    font-family: var(--restaurant-font);
+    color: var(--white);
+    text-align: center;
+    user-select: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.rgcw-content a {
+    width: 200px;
+    height: 45px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+}
+
+.rgcw-content a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--dark-color);
+    width: 0%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: all .3s ease;
+}
+
+
+.rgcw-content a:hover::after {
+    width: 100%;
+}
+
+.rgcw-content a h3 {
+    color: var(--dark-color);
+    font-family: var(--restaurant-font);
+    z-index: 1;
+    transition: color .3s ease;
+}
+
+.rgcw-content a:hover h3 {
+    color: var(--white);
+}
+
+@media only screen and (max-width: 1440px) {
+    .rgcw-content {
+        margin: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .rgcw-content {
+        margin: 0 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .rgcw-content {
+        margin: 0 15px;
+    }
+
+    .rg-tree1 {
+        top: calc(50% + 25%);
+        left: calc(50% + 45%);
+    }
+
+    .rgcw-content h1 {
+        color: var(--white);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .rgcw-content {
+        margin: 0 10px;
+    }
+
+    .rgcw-content .rgcw-h3 {
+        font-size: 1rem;
+    }
+
+    .rg-tree1 {
+        top: calc(50% + 25%);
+        left: calc(50% + 55%);
+    }
+
+    .rg-tree2 {
+        left: calc(50% - 70%);
+        top: 50%;
+        opacity: .5;
+    }
+    
+    .rg-tree3 {
+        left: calc(50% - 30%);
+    }
+
+    .rgcw-h3 {
+        font-weight: bold !important;
+    }
+
+    .rg-tree3-overlay {
+        opacity: .4 !important;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .rgcw-content {
+        margin: 0 5px;
+    }
+
+    .rg-tree1 {
+        top: calc(50% + 25%);
+        left: calc(50% + 60%);
+    }
+
+    .rg-tree2 {
+        left: calc(50% - 76%);
+        top: 50%;
+    }
+    
+    .rg-tree3 {
+        left: calc(50% - 30%);
+        top: calc(50% + 30%);
+    }
+
+    .rgcw-content .rgcw-h3 {
+        font-size: .9rem;
+    }
+}

@@ -1,0 +1,234 @@
+.landing-hall {
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.lh-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+/*----- Hall Table -----*/
+.lh-table {
+    top: calc(50% + 30%);
+    left: calc(50% - 20%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 100%;
+}
+
+/*----- Text -----*/
+.lh-text {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    color: var(--restaurant-title);
+    font-family: var(--restaurant-font);
+    font-size: 3.2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    pointer-events: auto !important;
+}
+
+.lh-text span {
+    color: var(--dark-color);
+    margin-left: 10px;
+    font-weight: 900;
+}
+
+.lh-button-content {
+    display: none;
+}
+
+.parallax-hall {
+    pointer-events: none;
+    transition: 0.45s cubic-bezier(.2, .49, .32, .99);
+    transform: translate(-50%, -50%);
+}
+
+.lh-text {
+    top: calc(50% - 15%);
+}
+
+.landing-hall {
+    width: 50%;
+    pointer-events: none;
+    user-select: none;
+}
+
+.landing-hall h1 {
+    user-select: none !important;
+    pointer-events: none !important;
+    font-family: var(--restaurant-font);
+}
+
+.lh-button-content {
+    display: block;
+    position: absolute;
+    top: calc(50% + 15%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 102;
+}
+
+.lh-button-content .lh-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 45px;
+    background-color: var(--white);
+    color: var(--hall-dark);
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    user-select: all !important;
+    pointer-events: all !important;
+    font-family: var(--restaurant-font);
+    animation: animateGlow 3s ease infinite;
+}
+
+.lh-button-content .lh-button::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--hall-dark);
+    left: 5%;
+    bottom: -25%;
+    z-index: -1;
+    filter: blur(5px);
+    opacity: .6;
+    pointer-events: none !important;
+    user-select: none !important;
+}
+
+.lh-main-img {
+    display: block;
+    z-index: 100;
+}
+
+.lh-main-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.lh-text span {
+    color: var(--white);
+}
+
+@media only screen and (max-width: 1024px) {
+    .lh-text {
+        font-size: 2.4rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .landing-hall {
+        height: 50vh;
+    }
+
+    .lh-text {
+        top: calc(50% - 15%);
+    }
+
+    .landing-hall {
+        width: 100%;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .landing-hall h1 {
+        user-select: none !important;
+        pointer-events: none !important;
+    }
+
+    .lh-button-content {
+        display: block;
+        position: absolute;
+        top: calc(50% + 15%);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 102;
+    }
+
+    .lh-button-content .lh-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 240px;
+        height: 45px;
+        background-color: var(--white);
+        color: var(--hall-dark);
+        text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
+        user-select: all !important;
+        pointer-events: all !important;
+    }
+
+    .lh-button-content .lh-button::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: var(--hall-dark);
+        left: 5%;
+        bottom: -25%;
+        z-index: -1;
+        filter: blur(5px);
+        opacity: .6;
+        pointer-events: none !important;
+        user-select: none !important;
+    }
+
+    .lh-main-img {
+        display: block;
+        z-index: 100;
+    }
+
+    .lh-main-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .lh-text span {
+        color: var(--white);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .lh-text {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .lh-text {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .lh-text {
+        font-size: 1.5rem;
+    }
+}

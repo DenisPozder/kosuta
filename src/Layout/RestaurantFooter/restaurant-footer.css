@@ -1,0 +1,185 @@
+.restaurant-footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--dark-color);
+}
+
+.rf-content {
+    margin: 0 80px;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 15px;
+    column-gap: 15px;
+    padding: 3rem 0;
+}
+
+.rf-column {
+    width: 100%;
+    height: auto;
+}
+
+.rf-column:nth-child(1) .rfc-logo {
+    height: 50px;
+    width: auto;
+}
+
+.rf-column:nth-child(1) .rfc-logo img {
+    height: 50px;
+    width: auto;
+}
+
+.rf-column:nth-child(1) h3 {
+    font-family: var(--restaurant-font);
+    margin: 1rem 0;
+    color: var(--white);
+    user-select: none;
+}
+
+.rf-column:nth-child(2) h1 {
+    text-align: center;
+    font-family: var(--restaurant-font);
+    color: var(--white);
+    user-select: none;
+    font-size: 1.8rem;
+}
+
+.rfc-days {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    background-color: var(--white);
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.rfc-days p {
+    color: var(--dark-color);
+    font-weight: 900;
+    user-select: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--restaurant-font);
+    font-size: 1.2rem;
+}
+
+.rfc-days p:nth-child(1) {
+    padding-top: 15px !important;
+}
+
+.rfc-days p:last-child {
+    padding-bottom: 15px !important;
+}
+
+.rfc-days .current-day {
+    color: var(--restaurant-background);
+}
+
+.rf-column:nth-child(3) {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.rf-column:nth-child(3) h1 {
+    text-align: center;
+    font-family: var(--restaurant-font);
+    color: var(--white);
+    user-select: none;
+    font-size: 1.8rem;
+}
+
+.rf-column:nth-child(3) h3 {
+    text-align: center;
+    font-family: var(--restaurant-font);
+    color: var(--white);
+    margin-top: 1rem;
+    user-select: none;
+}
+
+.rf-column:nth-child(3) a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: var(--restaurant-font);
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.rf-copyright {
+    width: 100%;
+    height: 50px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rf-copyright h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-color);
+    font-family: var(--restaurant-font);
+    vertical-align: middle;
+}
+
+.rf-copyright h3 svg {
+    margin-right: 5px;
+}
+
+.rf-copyright h3 span {
+    margin-right: 15px;
+}
+
+@media only screen and (max-width: 1440px) {
+    .rf-content {
+        margin: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .rf-content {
+        margin: 0 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .rf-content {
+        margin: 0 15px;
+    }
+
+    .rf-column h1 {
+        font-size: 1.4rem;
+    }
+
+    .rf-column h3 {
+        font-size: .9rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .rf-content {
+        margin: 0 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .rf-column {
+        align-items: flex-start !important;
+    }
+
+    .rf-column h1 {
+        text-align: left !important;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .rf-content {
+        margin: 0 5px;
+    }
+}

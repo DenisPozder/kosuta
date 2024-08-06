@@ -1,0 +1,126 @@
+.halls-hero-card {
+    width: 100%;
+    height: 100%;
+}
+
+.halls-hero-card-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    animation: opacityChange 1s ease-out forwards;
+}
+
+@keyframes opacityChange {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.halls-hero-card-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hhcs-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 45%, rgba(250,250,250,0.7) );
+    z-index: 21;
+}
+
+.hhcs-second-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    opacity: .2;
+}
+
+.hhcs-text-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 150;
+}
+
+.hhcs-text {
+    width: auto;
+    height: 100%;
+    margin: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hhcs-text h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    color: var(--dark-color);
+    font-family: var(--hall-font);
+    text-align: center;
+    margin-bottom: 3rem;
+    user-select: none;
+}
+
+.hhcs-text h3 {
+    color: var(--dark-color);
+    font-family: var(--hall-font);
+    text-align: center;
+    user-select: none;
+}
+
+@media only screen and (max-width: 1440px) {
+    .hhcs-text {
+        margin: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .hhcs-text {
+        margin: 0 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hhcs-text {
+        margin: 0 15px;
+    }
+
+    .hhcs-text h1 {
+        font-size: 2.6rem;
+    }
+
+    .hhcs-text h3 {
+        font-size: .9rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hhcs-text {
+        margin: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .hhcs-text {
+        margin: 0 5px;
+    }
+}

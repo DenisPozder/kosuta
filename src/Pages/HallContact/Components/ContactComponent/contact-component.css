@@ -1,0 +1,170 @@
+.contact-component {
+    width: 100%;
+    height: 100vh;
+    max-height: 1000px;
+}
+
+.contact-component img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-component::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+}
+
+.cc-wrap {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.cc-content {
+    width: auto;
+    height: 100%;
+    margin: 0 80px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cc-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    color: var(--white);
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 4rem;
+    animation: appearTextLeft .4s ease forwards;
+    font-family: "Brandon", sans-serif;
+}
+
+.cc-title::after {
+    position: absolute;
+    content: '';
+    bottom: -2rem;
+    left: 0;
+    width: 100px;
+    height: 8px;
+    background-color: var(--restaurant-background);
+    border-radius: 8px;
+}
+
+.cc-desc {
+    max-width: 400px;
+    color: var(--white);
+    animation: appearTextLeft .4s ease forwards;
+    opacity: 0;
+    animation-delay: .2s;
+    font-family: "Brandon", sans-serif;
+}
+
+.cc-btns {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.cc-call {
+    width: 240px;
+    height: 45px;
+    text-decoration: none;
+    color: var(--white);
+    text-transform: uppercase;
+    background-color: var(--restaurant-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    animation: appearTextLeft .4s ease forwards;
+    opacity: 0;
+    animation-delay: .4s;
+    font-family: "Brandon", sans-serif;
+}
+
+.cc-call span:first-child {
+    color: var(--hall-dark);
+}
+
+.cc-email {
+    width: 240px;
+    height: 45px;
+    color: var(--white);
+    background-color: var(--restaurant-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    animation: appearTextLeft .4s ease forwards;
+    opacity: 0;
+    animation-delay: .6s;
+    font-family: "Brandon", sans-serif;
+}
+
+.cc-email span:first-child {
+    color: var(--hall-dark);
+}
+
+@media only screen and (max-width: 1440px) {
+    .cc-content {
+        margin: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .cc-content {
+        margin: 0 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cc-content {
+        margin: 0 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .cc-content {
+        margin: 0 10px;
+    }
+
+    .cc-desc {
+        max-width: 100%;
+    }
+
+    .cc-call {
+        margin-right: 0;
+    }
+
+    .cc-email {
+        margin-top: 1rem;
+    }
+
+    .cc-btns {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .cc-content {
+        margin: 0 5px;
+    }
+
+    .cc-title {
+        font-size: 2.6rem;
+    }
+}

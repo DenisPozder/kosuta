@@ -1,0 +1,142 @@
+.hrp-component {
+    width: 100%;
+    height: 100vh;
+    max-height: 1000px;
+}
+
+.hrp-component img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hrp-wrap {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.hrp-content {
+    width: auto;
+    height: 100%;
+    margin: 0 80px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hrp-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    color: var(--white);
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.hrp-title::after {
+    position: absolute;
+    content: '';
+    bottom: -2rem;
+    left: 0;
+    width: 100px;
+    height: 8px;
+    background-color: var(--restaurant-background);
+    border-radius: 8px;
+}
+
+.hrp-desc {
+    max-width: 400px;
+    color: var(--white);
+}
+
+.hrp-btn {
+    display: flex;
+    width: 300px;
+    height: 45px;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    border: 3px solid var(--restaurant-background);
+    position: relative;
+    margin-top: 2rem;
+}
+
+.hrp-btn h3 {
+    text-transform: uppercase;
+    z-index: 1;
+    color: var(--restaurant-background);
+    transition: .4s ease;
+}
+
+.hrp-btn svg {
+    text-transform: uppercase;
+    z-index: 1;
+    color: var(--restaurant-background);
+    transition: .4s ease;
+}
+
+.hrp-btn::after {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 100%;
+    background-color: var(--restaurant-background);
+    color: var(--white);
+    transition: width .4s ease;
+}
+
+.hrp-btn:hover::after {
+    width: 100%;
+}
+
+.hrp-btn:hover h3 {
+    color: var(--white);
+}
+
+.hrp-btn:hover svg {
+    color: var(--white);
+}
+
+@media only screen and (max-width: 1440px) {
+    .hrp-content {
+        margin: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .hrp-content {
+        margin: 0 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hrp-content {
+        margin: 0 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hrp-content {
+        margin: 0 10px;
+    }
+
+    .hrp-desc {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .hrp-content {
+        margin: 0 5px;
+    }
+
+    .hrp-title {
+        font-size: 2.6rem;
+    }
+}

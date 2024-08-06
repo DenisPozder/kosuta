@@ -1,0 +1,64 @@
+.language-switcher {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    transition: all .4s ease;
+    transform: scale(0.6);
+}
+
+.language-switcher.show {
+    opacity: 1;
+    pointer-events: all;
+    user-select: all;
+    transform: scale(1);
+}
+
+.language-switcher.hide {
+    transform: scale(0.6);
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.ls-content {
+    width: 40%;
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 20px;
+}
+
+.language-switcher .ls-btn {
+    width: 200px;
+    height: 45px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--restaurant-background);
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.language-switcher .ls-btn:last-child {
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .ls-content {
+        width: 90% !important;
+    }
+}

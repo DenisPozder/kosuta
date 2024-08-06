@@ -1,0 +1,63 @@
+.restaurant-gallery-card {
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    user-select: none;
+    overflow-y: hidden;
+}
+
+.restaurant-gallery-card::-webkit-scrollbar {
+    display: none;
+}
+
+.rgc-inner {
+    width: 90%;
+    height: 100%;
+    position: relative;
+}
+
+.rgc-inner::after {
+    position: absolute;
+    content: 'Košuta';
+    width: 120px;
+    height: 45px;
+    background-color: var(--white);
+    top: 10px;
+    left: -6%;
+    border-top-left-radius: 10px !important;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--restaurant-font);
+    color: var(--dark-color);
+    font-size: 1.2rem;
+}
+
+.rgc-inner::before {
+    position: absolute;
+    content: 'Restoran';
+    width: 120px;
+    height: 45px;
+    background-color: var(--white);
+    bottom: 10px;
+    right: -6%;
+    border-top-left-radius: 10px !important;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--restaurant-font);
+    color: var(--dark-color);
+    font-size: 1.2rem;
+}
+
+.rgc-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
+}

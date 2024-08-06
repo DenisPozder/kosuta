@@ -1,0 +1,542 @@
+.restaurant-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--restaurant-background);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.rh-bird {
+    background-image: url('../../../../Assets//Restaurant//bird.svg');
+    background-size: auto 100%;
+    width: 88px;
+    height: 125px;
+    will-change: background-position;
+    z-index: 999;
+    animation-name: fly-cycle;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-delay: -0.5s;	
+}
+
+.rh-bird-container {
+    position: absolute;
+	top: 20%;
+	left: -10%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+	
+	animation-name: fly-right-one;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+    z-index: 999;
+    animation-duration: 15s;
+    animation-delay: 0;
+}
+
+.rh-bird2 {
+    background-image: url('../../../../Assets//Restaurant//bird.svg');
+    background-size: auto 100%;
+    width: 88px;
+    height: 125px;
+    will-change: background-position;
+    z-index: 999;
+    animation-name: fly-cycle;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+    animation-duration: 1.25s;
+    animation-delay: -0.25s;
+}
+
+.rh-bird-container2 {
+	position: absolute;
+	top: 20%;
+	left: -10%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+    z-index: 999;
+	
+	animation-name: fly-right-one;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+    animation-duration: 14.6s;
+    animation-delay: 9.5s;
+}
+
+.rh-bird3 {
+    background-image: url('../../../../Assets//Restaurant//bird.svg');
+    background-size: auto 100%;
+    width: 88px;
+    height: 125px;
+    will-change: background-position;
+    z-index: 999;
+    animation-name: fly-cycle;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+    animation-duration: 0.9s;
+    animation-delay: -0.75s;
+}
+
+.rh-bird-container3 {
+	position: absolute;
+	top: 20%;
+	left: -10%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+    z-index: 999;
+	
+	animation-name: fly-right-one;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+    animation-duration: 16s;
+    animation-delay: 1s;
+}
+
+@keyframes fly-cycle {
+	
+	100% {
+		background-position: -900px 0;
+	}
+	
+}
+
+@keyframes fly-right-one {
+	
+	0% {
+		transform: scale(0.3) translateX(-10vw);
+	}
+	
+	10% {
+		transform: translateY(2vh) translateX(10vw) scale(0.4);
+	}
+	
+	20% {
+		transform: translateY(0vh) translateX(30vw) scale(0.5);
+	}
+	
+	30% {
+		transform: translateY(4vh) translateX(50vw) scale(0.6);
+	}
+	
+	40% {
+		transform: translateY(2vh) translateX(70vw) scale(0.6);
+	}
+	
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
+	}
+	
+	60% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+}
+
+.rh-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.rhw-tree1-img {
+    width: auto;
+    height: 120%;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 48%);
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    animation: hiddenLeft 1s ease;
+}
+
+@keyframes hiddenLeft {
+    0% {
+        transform: translate(-80%, -50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.rhw-tree2-img {
+    position: absolute;
+    top: calc(50% + 20%);
+    left: calc(50% + 50%);
+    transform: translate(-50%, -50%);
+    height: 620px;
+    width: auto;
+    z-index: 1;
+    animation: hiddenRight 1s ease;
+}
+
+@keyframes hiddenRight {
+    0% {
+        transform: translate(10%, -50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.rhw-tree2-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-color);
+    opacity: .5;
+    z-index: 2;
+}
+
+.rh-wrap .rhw-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rhw-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 35%, var(--restaurant-background) );
+}
+
+.rhw-top {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(to top, var(--restaurant-background), transparent 30%);
+    z-index: 10;
+}
+
+.rhw-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--white);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 199;
+    opacity: 0.5;
+    transition: opacity .3s ease;
+}
+
+.rhw-btn svg {
+    color: var(--dark-color);
+    font-size: 1rem;
+}
+
+.rhw-btn:hover {
+    opacity: 1;
+}
+
+.rhw-prev {
+    left: 30px;
+}
+
+.rhw-next {
+    right: 30px;
+}
+
+.rhw-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 25;
+    display: flex;
+    align-items: flex-end;
+}
+
+.rhwc-text {
+    width: 100%;
+    height: calc(100vh - 100px);
+    margin: 0 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rhwct-items {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.rhwct-items h1 {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 2.4rem;
+    font-family: var(--restaurant-font);
+    user-select: none;
+    animation: h1FromTop 1s ease forwards;
+}
+
+@keyframes h1FromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.rhwct-items .rhcwt-h3 {
+    text-align: center;
+    color: var(--white);
+    font-family: var(--restaurant-font);
+    font-weight: bold !important;
+    user-select: none;
+    animation: h3Opacity 1s ease forwards;
+    font-size: 1.4rem;
+}
+
+@keyframes h3Opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.rhwct-items a {
+    width: 200px;
+    height: 45px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+    animation: aFromBottom 1s ease forwards;
+}
+
+@keyframes aFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.rhwct-items a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--dark-color);
+    width: 0%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: all .3s ease;
+}
+
+
+.rhwct-items a:hover::after {
+    width: 100%;
+}
+
+.rhwct-items a h3 {
+    color: var(--dark-color);
+    font-family: var(--restaurant-font);
+    z-index: 1;
+    transition: color .3s ease;
+}
+
+.rhwct-items a:hover h3 {
+    color: var(--white);
+}
+
+@media only screen and (max-width: 1440px) {
+    .rhw-prev {
+        left: 20px;
+    }
+
+    .rhw-next {
+        right: 20px;
+    }
+
+    .rhwc-text {
+        margin: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .rhw-prev {
+        left: 5px;
+    }
+
+    .rhw-next {
+        right: 5px;
+    }
+
+    .rhwc-text {
+        margin: 0 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .rhw-prev {
+        left: 0px;
+    }
+
+    .rhw-next {
+        right: 0px;
+    }
+
+    .rhw-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .rhw-tree1-img {
+        width: auto;
+        height: 120%;
+        position: absolute;
+        top: 50%;
+        left: calc(50% - 52%);
+        transform: translate(-50%, -50%);
+    }
+    
+    .rhw-tree2-img {
+        position: absolute;
+        top: calc(50% + 20%);
+        left: calc(50% + 56%);
+        transform: translate(-50%, -50%);
+        height: 620px;
+        width: auto;
+    }
+
+    .rhwc-text {
+        margin: 0 15px;
+    }
+
+    .rhwct-items h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .rhw-tree1-img {
+        width: auto;
+        height: 120%;
+        position: absolute;
+        top: 50%;
+        left: calc(50% - 56%);
+        transform: translate(-50%, -50%);
+    }
+    
+    .rhw-tree2-img {
+        position: absolute;
+        top: calc(50% + 20%);
+        left: calc(50% + 69%);
+        transform: translate(-50%, -50%);
+        height: 620px;
+        width: auto;
+    }
+
+    .rhwc-text {
+        margin: 0 10px;
+    }
+
+    .rhwct-items h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .rhwct-items .rhcwt-h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .rhw-tree1-img {
+        width: auto;
+        height: 120%;
+        position: absolute;
+        top: 50%;
+        left: calc(50% - 58%);
+        transform: translate(-50%, -50%);
+    }
+    
+    .rhw-tree2-img {
+        position: absolute;
+        top: calc(50% + 20%);
+        left: calc(50% + 76%);
+        transform: translate(-50%, -50%);
+        height: 620px;
+        width: auto;
+    }
+
+    .rhwc-text {
+        margin: 0 5px;
+    }
+
+    .rhwct-items .rhcwt-h3 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .rhw-tree1-img {
+        width: auto;
+        height: 120%;
+        position: absolute;
+        top: 50%;
+        left: calc(50% - 60%);
+        transform: translate(-50%, -50%);
+    }
+    
+    .rhw-tree2-img {
+        position: absolute;
+        top: calc(50% + 20%);
+        left: calc(50% + 80%);
+        transform: translate(-50%, -50%);
+        height: 620px;
+        width: auto;
+    }
+
+    .rhwct-items .rhcwt-h3 {
+        font-size: .9rem;
+    }
+}

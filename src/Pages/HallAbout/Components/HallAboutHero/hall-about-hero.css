@@ -1,0 +1,164 @@
+.hall-about-hero {
+    width: 100%;
+    height: 100vh;
+}
+
+.hall-about-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hall-about-hero::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+}
+
+.hah-wrap {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.hah-content {
+    width: auto;
+    height: 100%;
+    margin: 0 80px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hah-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    color: var(--white);
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 4rem;
+    animation: appearTextLeft .4s ease forwards;
+    font-family: "Brandon", sans-serif;
+}
+
+.hah-title::after {
+    position: absolute;
+    content: '';
+    bottom: -2rem;
+    left: 0;
+    width: 100px;
+    height: 8px;
+    background-color: var(--restaurant-background);
+    border-radius: 8px;
+}
+
+.hah-desc1 {
+    max-width: 400px;
+    color: var(--white);
+    animation: appearTextLeft .4s ease forwards;
+    opacity: 0;
+    animation-delay: .2s;
+    font-family: "Brandon", sans-serif;
+    font-size: 1.2rem;
+}
+
+.hah-desc2 {
+    max-width: 400px;
+    color: var(--white);
+    margin: 2rem 0;
+    animation: appearTextLeft .4s ease forwards;
+    opacity: 0;
+    animation-delay: .4s;
+    font-family: "Brandon", sans-serif;
+    font-size: 1.2rem;
+}
+
+.hah-btn {
+    width: 240px;
+    height: 45px;
+    background-color: var(--restaurant-background);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    pointer-events: none;
+    user-select: none;
+    animation: appearTextLeft .4s ease forwards;
+    opacity: 0;
+    animation-delay: .6s;
+}
+
+@media only screen and (max-width: 1440px) {
+    .hah-content {
+        margin: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .hah-content {
+        margin: 0 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hah-content {
+        margin: 0 15px;
+    }
+
+    .hah-title {
+        font-size: 2.6rem;
+    }
+
+    .hah-desc2 {
+        margin: 1rem 0;
+    }
+
+    .hah-btn {
+        margin-top: 1rem;
+    }
+
+    .hah-desc1 {
+        font-size: 1.1rem;
+    }
+    
+    .hah-desc2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hah-content {
+        margin: 0 10px;
+    }
+
+    .hah-title {
+        font-size: 2.2rem;
+    }
+
+    .hah-desc2 {
+        margin: 1rem 0;
+    }
+
+    .hah-btn {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .hah-content {
+        margin: 0 5px;
+    }
+}

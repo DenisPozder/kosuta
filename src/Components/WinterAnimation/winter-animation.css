@@ -1,0 +1,6 @@
+.snowfall canvas {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    pointer-events: none;
+}

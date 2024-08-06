@@ -1,0 +1,11 @@
+.landing-component {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+    .landing-component {
+        flex-direction: column;
+    }
+}

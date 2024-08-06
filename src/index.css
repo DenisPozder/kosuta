@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Old+Standard+TT&family=Open+Sans&family=Poly:ital@0;1&display=swap');
+
+:root {
+  --restaurant-font: "Brandon", sans-serif;;
+  --hall-font: 'Poly', serif;
+  --restaurant-background: #9AB498;
+  --restaurant-title: #01B636;
+  --white: #fff;
+  --dark-color: #0b372d;
+  --restaurant-text: #05251d;
+  --hall-dark: #3A4D39;
+  --glow: #01cb3e;
+}
+
+@font-face {
+  font-family: "Brandon";
+  src: url('./Assets/Brandon.otf') format('opentype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--restaurant-background);
+}
+
+.page-section {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.from-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all .4s ease;
+}
+
+.from-right {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all .4s ease;
+}
+
+.from-left.appear, .from-right.appear {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.from-top {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all .4s ease;
+}
+
+.from-bottom {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all .4s ease;
+}
+
+.from-top.appear, .from-bottom.appear {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/*----- Animation for Hall Hero section -----*/
+@keyframes appearTextLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.toggle-language {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--hall-dark);
+  border-radius: 50%;
+  z-index: 9999;
+  border: 2px solid var(--white);
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .toggle-language {
+    bottom: 15px;
+    left: 15px;
+}
+}
+
+@media only screen and (max-width: 480px) {
+  .toggle-language {
+    bottom: 10px;
+    left: 10px;
+}
+}
+
+@media only screen and (max-width: 376px) {
+  .toggle-language {
+    bottom: 5px;
+    left: 5px;
+}
+}

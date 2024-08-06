@@ -1,0 +1,208 @@
+.restaurant-celebrations {
+    padding: 3rem 0;
+    position: relative;
+}
+
+.rc-tree-left {
+    position: absolute;
+    top: calc(50% - 25%);
+    left: calc(50% - 40%);
+    transform: translate(-50%, -50%);
+    height: 680px;
+    z-index: 20;
+}
+
+.rc-branch2-img {
+    position: absolute;
+    top: calc(50% + 55%);
+    left: calc(50% + 25%);
+    transform: translate(-50%, -50%);
+    width: 800px;
+    z-index: 100;
+}
+
+.rc-leaves-img {
+    position: absolute;
+    right: -100px;
+    top: -200px;
+    z-index: 100;
+    transform: scaleX(-1);
+    height: 800px;
+}
+
+.restaurant-celebrations-content {
+    width: auto;
+    height: 100%;
+    margin: 0 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.rcc-column {
+    height: 380px;
+    width: 100%;
+}
+
+.rcc-column:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 100;
+    background-color: rgba(154, 180, 152, 0.6);
+    backdrop-filter: blur(2px);
+}
+
+.rcc-column:nth-child(1) h1 {
+    font-size: 2.4rem;
+    color: var(--white);
+    font-family: var(--restaurant-font);
+    user-select: none;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.rcc-column:nth-child(1) h3 {
+    color: var(--restaurant-text);
+    font-family: var(--restaurant-font);
+    user-select: none;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.rcc-slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.rcc-slider-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.rcc-slider-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: sliderOpacity 1s ease-out forwards;
+}
+
+@keyframes sliderOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.rcc-slider-card img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    user-select: none;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1440px) {
+    .restaurant-celebrations-content {
+        margin: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .restaurant-celebrations-content {
+        margin: 0 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .restaurant-celebrations-content {
+        margin: 0 15px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .rcc-column:nth-child(1) {
+        height: auto;
+    }
+
+    .rcc-column:nth-child(1) h1 {
+        margin-bottom: 1rem;
+        color: var(--white);
+    }
+    
+    .rc-branch2-img {
+        position: absolute;
+        top: calc(50% + 55%);
+        left: calc(50% + 25%);
+        transform: translate(-50%, -50%);
+        width: 120%;
+        z-index: 100;
+    }
+
+    .rc-leaves-img {
+        position: absolute;
+        z-index: 99;
+        top: 50%;
+        left: calc(50% + 45%);
+        transform: translate(-50%, -50%) scaleX(-1);
+        height: 800px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .restaurant-celebrations-content {
+        margin: 0 10px;
+    }
+
+    .rcc-column:nth-child(1) h1 {
+        font-size: 2rem;
+    }
+
+    .rcc-column:nth-child(1) h3 {
+        font-size: 1rem !important;
+    }
+    
+    .rc-branch2-img {
+        position: absolute;
+        top: calc(50% + 55%);
+        left: calc(50% + 25%);
+        transform: translate(-50%, -50%);
+        width: 180%;
+        z-index: 100;
+    }
+
+    .rc-leaves-img {
+        position: absolute;
+        z-index: 99;
+        top: 50%;
+        left: calc(50% + 48%);
+        transform: translate(-50%, -50%) scaleX(-1);
+        height: 800px;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .restaurant-celebrations-content {
+        margin: 0 5px;
+    }
+
+    .rcc-column:nth-child(1) h3 {
+        font-size: .9rem !important;
+    }
+}

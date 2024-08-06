@@ -1,0 +1,6 @@
+.parallax {
+    pointer-events: none;
+    transition: 0.45s cubic-bezier(.2, .49, .32, .99);
+    transform: translate(-50%, -50%);
+}
+

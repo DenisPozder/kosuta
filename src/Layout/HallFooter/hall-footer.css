@@ -1,0 +1,203 @@
+.hall-footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--white);
+}
+
+.hf-content {
+    margin: 0 80px;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 15px;
+    column-gap: 15px;
+    padding: 3rem 0;
+}
+
+.hf-column {
+    width: 100%;
+    height: auto;
+}
+
+.hf-column:nth-child(1) .hfc-logo {
+    height: 50px;
+    width: auto;
+}
+
+.hf-column:nth-child(1) .hfc-logo img {
+    height: 50px;
+    width: auto;
+}
+
+.hf-column:nth-child(1) h3 {
+    font-family: var(--hall-font);
+    margin: 1rem 0;
+    color: var(--hall-dark);
+    user-select: none;
+    font-family: "Brandon", sans-serif;
+}
+
+.hf-column:nth-child(2) h1 {
+    text-align: center;
+    font-family: var(--hall-font);
+    color: var(--hall-dark);
+    user-select: none;
+    font-size: 1.8rem;
+    font-family: "Brandon", sans-serif;
+}
+
+.hfc-days {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    background-color: var(--hall-dark);
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hfc-days p {
+    color: var(--white);
+    font-weight: 900;
+    user-select: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--hall-dark);
+    font-family: "Brandon", sans-serif;
+    font-size: 1.2rem;
+}
+
+.hfc-days p:nth-child(1) {
+    padding-top: 15px !important;
+}
+
+.hfc-days p:last-child {
+    padding-bottom: 15px !important;
+}
+
+.hfc-days .current-day {
+    color: var(--restaurant-background);
+    font-family: "Brandon", sans-serif;
+}
+
+.hf-column:nth-child(3) {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.hf-column:nth-child(3) h1 {
+    text-align: center;
+    font-family: var(--hall-font);
+    color: var(--hall-dark);
+    user-select: none;
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+    font-family: "Brandon", sans-serif;
+}
+
+.hf-column:nth-child(3) {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hf-column:nth-child(3) h3 {
+    text-align: center;
+    font-family: var(--hall-font);
+    color: var(--hall-dark);
+    margin-top: 1rem;
+    user-select: none;
+    width: 100%;
+    font-family: "Brandon", sans-serif;
+}
+
+.hf-column:nth-child(3) a {
+    text-decoration: none;
+    color: var(--hall-dark);
+    font-family: var(--hall-font);
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.hf-copyright {
+    width: 100%;
+    height: 50px;
+    background-color: var(--hall-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hf-copyright h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-family: var(--hall-font);
+    vertical-align: middle;
+    font-family: "Brandon", sans-serif;
+}
+
+.hf-copyright h3 svg {
+    margin-right: 5px;
+}
+
+.hf-copyright h3 span {
+    margin-right: 15px;
+    font-family: "Brandon", sans-serif;
+}
+
+@media only screen and (max-width: 1440px) {
+    .hf-content {
+        margin: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .hf-content {
+        margin: 0 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hf-content {
+        margin: 0 15px;
+    }
+
+    .hf-column h1 {
+        font-size: 1.4rem;
+    }
+
+    .hf-column h3 {
+        font-size: .9rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hf-content {
+        margin: 0 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .hf-column {
+        align-items: flex-start !important;
+    }
+
+    .hf-column h1 {
+        text-align: left !important;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .hf-content {
+        margin: 0 5px;
+    }
+}

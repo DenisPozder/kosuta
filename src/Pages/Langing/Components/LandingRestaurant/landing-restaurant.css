@@ -1,0 +1,348 @@
+.landing-restaurant {
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.lr-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+/*----- Leaves -----*/
+.lr-leaves {
+    position: absolute;
+    top: calc(50% - 40% );
+    left: calc(50% + 10%);
+    z-index: 1;
+}
+
+/*----- Table -----*/
+.lr-table {
+    position: absolute;
+    width: 400px;
+    top: calc(50% + 5%);
+    left: calc(50% - 20%);
+    z-index: 2;
+}
+
+.lr-table img {
+    width: 400px;
+}
+
+/*----- Animal -----*/
+.lr-animal {
+    position: absolute;
+    top: calc(50% + 20%);
+    left: calc(50% + 40%);
+    z-index: 4;
+}
+
+/*----- Plants -----*/
+.lr-plants {
+    position: absolute;
+    top: calc(50% + 50%);
+    width: 110%;
+    left: 50%;
+    z-index: 5;
+}
+
+.lr-plants img {
+    width: 110%;
+}
+
+/*----- Text -----*/
+.lr-text {
+    position: absolute;
+    z-index: 7;
+    top: 50%;
+    left: 50%;
+    color: var(--white);
+    font-family: var(--restaurant-font);
+    font-size: 3.2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    pointer-events: auto !important;
+}
+
+.lr-text span {
+    color: var(--restaurant-title);
+    margin-left: 10px;
+    font-weight: 900;
+}
+
+/*----- Tree -----*/
+.lr-tree {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 55%);
+    transform: translate(-50%, -50%);
+    height: 110%;
+    width: auto;
+    z-index: 6;
+}
+
+.lr-tree img {
+    height: 110%;
+    width: auto;
+}
+
+.lr-text {
+    top: calc(50% - 15%);
+}
+
+.landing-restaurant {
+    width: 50%;
+    pointer-events: none;
+    user-select: none;
+}
+
+.landing-restaurant h1 {
+    pointer-events: none !important;
+    user-select: none !important;
+    font-family: var(--restaurant-font);
+}
+
+.vignette {
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 65%, rgba(250,250,250,0.7) );
+}
+
+.lr-button-content {
+    display: block;
+    position: absolute;
+    top: calc(50% + 15%) !important;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 102;
+}
+
+.lr-button-content .lr-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 45px;
+    background-color: var(--white);
+    color: var(--dark-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    user-select: all !important;
+    pointer-events: all !important;
+    font-family: var(--restaurant-font);
+    animation: animateGlow 3s ease infinite;
+}
+
+@keyframes animateGlow {
+    0% {
+        background-color: var(--white);
+    }
+    50% {
+        background-color: var(--glow);
+        box-shadow: 0 0 30px var(--glow);
+    }
+    100% {
+        background-color: var(--white);
+    }
+}
+
+.lr-button-content .lr-button::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-color);
+    left: 5%;
+    bottom: -25%;
+    z-index: -1;
+    filter: blur(5px);
+    opacity: .6;
+    pointer-events: none !important;
+    user-select: none !important;
+}
+
+.lr-main-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.lr-main-img {
+    display: block;
+}
+
+/*----- Vignette -----*/
+.vignette {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 65%, rgba(0,0,0,0.7) );
+    pointer-events: none;
+}
+
+.lp-top-overlay {
+    z-index: 101;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--restaurant-background), transparent 30%);
+    pointer-events: none;
+}
+
+.lp-bottom-overlay {
+    z-index: 101;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--restaurant-background), transparent 30%);
+    pointer-events: none;
+}
+
+.parallax {
+    pointer-events: none;
+    transition: 0.45s cubic-bezier(.2, .49, .32, .99);
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1024px) {
+    .lr-text {
+        font-size: 2.4rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .lr-text {
+        top: calc(50% - 15%);
+    }
+
+    .landing-restaurant {
+        width: 100%;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .landing-restaurant h1 {
+        pointer-events: none !important;
+        user-select: none !important;
+    }
+
+    .vignette {
+        background: radial-gradient(ellipse at center, rgba(0,0,0,0) 65%, rgba(250,250,250,0.7) );
+    }
+
+    .lr-button-content {
+        display: block;
+        position: absolute;
+        top: calc(50% + 15%) !important;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 102;
+    }
+
+    .lr-button-content .lr-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 240px;
+        height: 45px;
+        background-color: var(--white);
+        color: var(--dark-color);
+        text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
+        user-select: all !important;
+        pointer-events: all !important;
+    }
+
+    .lr-button-content .lr-button::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: var(--dark-color);
+        left: 5%;
+        bottom: -25%;
+        z-index: -1;
+        filter: blur(5px);
+        opacity: .6;
+        pointer-events: none !important;
+        user-select: none !important;
+    }
+
+    .lr-main-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .lr-main-img {
+        display: block;
+    }
+
+    .landing-restaurant {
+        height: 50vh !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .lr-text {
+        font-size: 2rem;
+    }
+
+    /*----- Table -----*/
+    .lr-table {
+        width: 300px;
+        top: calc(50% + 5%);
+        left: calc(50% - 12%);
+    }
+
+    .lr-table img {
+        width: 300px;
+    }
+
+    .lr-tree {
+        left: calc(50% + 65%);
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .lr-text {
+        font-size: 1.8rem;
+    }
+
+    .lr-tree {
+        left: calc(50% + 75%);
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .lr-text {
+        font-size: 1.5rem;
+    }
+
+    .lr-tree {
+        left: calc(50% + 80%);
+    }
+}

@@ -1,0 +1,204 @@
+.rg-component {
+    width: 100%;
+    height: auto;
+}
+
+.rgc-content {
+    width: auto;
+    height: 100%;
+    margin: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rgc-content h1 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-family: var(--restaurant-font);
+    color: var(--dark-color);
+    margin: 1rem 0;
+    user-select: none;
+}
+
+.rgc-categories {
+    width: 100%;
+    height: 60px;
+    background-color: var(--white);
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.rgc-text {
+    height: 100%;
+    width: 200px;
+    background-color: var(--restaurant-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rgc-text h3 {
+    color: var(--white);
+    text-transform: uppercase;
+    user-select: none;
+    font-family: var(--restaurant-font);
+    font-weight: 100;
+}
+
+.rgc-button {
+    width: 200px;
+    height: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--white);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rgc-button h3 {
+    font-family: var(--restaurant-font);
+    font-weight: 100;
+    color: var(--restaurant-text);
+}
+
+.rgc-button::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 80%;
+    width: 1px;
+    background-color: var(--restaurant-text);
+    z-index: 1;
+}
+
+.rgb-active {
+    background-color: var(--dark-color);
+    position: relative;
+}
+
+.rgb-active h3 {
+    color: var(--white);
+}
+
+.rgc-gallery {
+    width: 100%;
+    height: auto;
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.rgc-gallery-image {
+    width: 100%;
+    height: 420px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.rgc-gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
+}
+
+.in-viewport {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1440px) {
+    .rgc-content {
+        margin: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .rgc-content {
+        margin: 0 25px;
+    }
+
+    .rgc-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .rgc-categories {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        height: auto;
+    }
+
+    .rgc-categories .rgc-text {
+        height: 60px;
+        width: auto;
+    }
+
+    .rgc-categories .rgc-button {
+        width: auto;
+        height: 60px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .rgc-content {
+        margin: 0 15px;
+    }
+
+    .rgc-gallery {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .rgc-text {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .rgc-content {
+        margin: 0 10px;
+    }
+
+    .rgc-categories {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        height: auto;
+        gap: 15px;
+        background-color: transparent;
+    }
+
+    .rgc-button::after {
+        display: none;
+    }
+
+    .rgc-gallery {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .rgc-content h1 {
+        text-align: center !important;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .rgc-content {
+        margin: 0 5px;
+    }
+
+    .rgc-categories .rgc-text h3 {
+        font-size: 1rem;
+    }
+
+    .rgc-categories .rgc-button h3 {
+        font-size: 1rem;
+    }
+}

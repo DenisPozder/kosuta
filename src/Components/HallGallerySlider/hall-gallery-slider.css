@@ -1,0 +1,141 @@
+.hall-gallery-slider {
+    width: 100%;
+    height: auto;
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hgs-tree1-img {
+    position: absolute;
+    top: calc(50% + 30%);
+    left: calc(50% - 48%);
+    transform: translate(-50%, -50%);
+    height: 400px;
+    z-index: 1;
+}
+
+.hgs-tree1-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    opacity: .5;
+    z-index: 2;
+}
+
+.hgs-tree2-img {
+    position: absolute;
+    top: calc(50% + 20%);
+    left: calc(50% - 30%);
+    transform: translate(-50%, -50%);
+    height: 600px;
+    z-index: 3;
+}
+
+.hgs-tree2-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    opacity: .3;
+    z-index: 4;
+}
+
+.hgs-main-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--white), transparent 30%);
+    z-index: 29;
+}
+
+.hgs-content {
+    width: auto;
+    height: auto;
+    margin: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 30;
+    position: relative;
+}
+
+.hgs-content h1 {
+    font-family: var(--hall-font);
+    text-transform: uppercase;
+    color: var(--dark-color);
+    user-select: none;
+}
+
+.hgs-btn {
+    width: 240px;
+    height: 45px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: var(--hall-font);
+    cursor: pointer;
+    background-color: var(--restaurant-background);
+    color: var(--white);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color .3s ease-in-out;
+}
+
+.hgs-btn:hover {
+    background-color: var(--dark-color);
+}
+
+@media only screen and (max-width: 1440px) {
+    .hgs-content {
+        margin: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .hgs-content {
+        margin: 0 25px;
+    }
+
+    .hgs-tree2-img {
+        left: calc(50% - 20%);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hgs-content {
+        margin: 0 15px;
+    }
+
+    .hgs-tree2-img {
+        left: calc(50% - 10%);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hgs-content {
+        margin: 0 10px;
+    }
+
+    .hgs-tree2-img {
+        left: calc(50% + 25%);
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .hgs-content {
+        margin: 0 5px !important;
+    }
+}
+

@@ -1,0 +1,230 @@
+.restaurant-about-hero {
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: relative;
+    z-index: 2;
+}
+
+.rah-slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.rah-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.rah-card-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: aboutOpacity 1s ease forwards;
+}
+
+@keyframes aboutOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.rah-card-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rah-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.rah-card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.rah-card-text {
+    position: relative;
+    width: auto;
+    margin: 0 80px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rah-card-text .rahc-title {
+    margin-bottom: 3rem;
+    color: var(--white);
+    font-family: var(--restaurant-font);
+    text-transform: uppercase;
+    user-select: none;
+    font-weight: 100;
+    font-size: 2.4rem;
+    animation: appearFromLeft .5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes appearFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.rah-card-text .rahc-desc {
+    color: var(--white);
+    max-width: 60%;
+    font-family: var(--restaurant-font);
+    font-weight: 600;
+    user-select: none;
+    animation: appearFromLeft .5s ease forwards;
+    opacity: 0;
+    animation-delay: .25s;
+}
+
+.rahs-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--white);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 199;
+    opacity: 0.5;
+    transition: opacity .3s ease;
+}
+
+.rahs-btn:hover {
+    opacity: 1;
+}
+
+.rahs-btn svg {
+    color: var(--dark-color);
+    font-size: 1rem;
+}
+
+.rahs-prev {
+    left: 30px;
+}
+
+.rahs-next {
+    right: 30px;
+}
+
+@media only screen and (max-width: 1440px) {
+    .rah-card-text {
+        margin: 0 50px;
+    }
+
+    .rahs-prev {
+        left: 20px;
+    }
+
+    .rahs-next {
+        right: 20px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .rah-card-text {
+        margin: 0 25px;
+    }
+    
+    .rah-card-text .rahc-desc {
+        max-width: 70%;
+    }
+
+    .rahs-prev {
+        left: 5px;
+    }
+
+    .rahs-next {
+        right: 5px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .rah-card-text {
+        margin: 0 15px;
+    }
+
+    .rah-card-text .rahc-title {
+        font-size: 2.2rem;
+    }
+    
+    .rah-card-text .rahc-desc {
+        max-width: 80%;
+    }
+
+    .rmh-prev {
+        left: 0px;
+    }
+
+    .rmh-next {
+        right: 0px;
+    }
+
+    .rahs-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .rahs-btn svg {
+        font-size: .8rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .rah-card-text {
+        margin: 0 10px;
+    }
+
+    .rah-card-text .rahc-title {
+        font-size: 2rem;
+    }
+    
+    .rah-card-text .rahc-desc {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .rah-card-text {
+        margin: 0 5px;
+    }
+}

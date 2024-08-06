@@ -1,0 +1,89 @@
+.restaurant-menu-hero {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--restaurant-background);
+    overflow: hidden;
+    position: relative;
+}
+
+.rmh-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.rmh-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--white);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 199;
+    opacity: 0.5;
+    transition: opacity .3s ease;
+}
+
+.rmh-btn:hover {
+    opacity: 1;
+}
+
+.rmh-btn svg {
+    color: var(--dark-color);
+    font-size: 1rem;
+}
+
+.rmh-prev {
+    left: 30px;
+}
+
+.rmh-next {
+    right: 30px;
+}
+
+@media only screen and (max-width: 1440px) {
+    .rmh-prev {
+        left: 20px;
+    }
+
+    .rmh-next {
+        right: 20px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .rmh-prev {
+        left: 5px;
+    }
+
+    .rmh-next {
+        right: 5px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .rmh-prev {
+        left: 0px;
+    }
+
+    .rmh-next {
+        right: 0px;
+    }
+
+    .rmh-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .rmh-btn svg {
+        font-size: .8rem;
+    }
+}
